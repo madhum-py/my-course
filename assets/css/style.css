@@ -146,7 +146,7 @@ button:hover {
     background: white;
     padding: 20px;
     border-radius: 10px;
-    width: 40%;
+    width: 90%;
     max-width: 450px;
     text-align: left;
     color: black;
@@ -221,25 +221,7 @@ input:focus {
     }
 }
 
-/* Mobile Compatibility */
-@media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
 
-    .header-logo {
-        align-items: center;
-        margin-bottom: 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
-}
 
 /* Hamburger Menu */
 .hamburger-menu {
@@ -277,5 +259,12 @@ input:focus {
 
     .navbar.show {
         display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px; /* Reduce padding to save space */
     }
 }
