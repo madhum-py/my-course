@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Course Registration - Meta Minds EdTech</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Meta Minds EdTech</h1>
+        <p>Your gateway to mastering programming!</p>
+    </header>
+
+    <section class="batch-section">
+        <h2>Available Batches</h2>
+        <table>
+            <tr>
+                <th>Date</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+                <th>Register</th>
+            </tr>
+            <tr>
+                <td>Feb 20, 2025</td>
+                <td>6:00 PM</td>
+                <td>7:00 PM</td>
+                <td><button class="register-btn" data-batch="Feb 20, 6-7 PM">Register</button></td>
+            </tr>
+            <tr>
+                <td>Feb 25, 2025</td>
+                <td>7:30 PM</td>
+                <td>8:30 PM</td>
+                <td><button class="register-btn" data-batch="Feb 25, 7:30-8:30 PM">Register</button></td>
+            </tr>
+        </table>
+    </section>
+
+    <div class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Register for Live Course</h2>
+            <form id="registration-form">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" required>
+                
+                <label for="email">Email (Optional):</label>
+                <input type="email" id="email">
+                
+                <label for="whatsapp">WhatsApp Number:</label>
+                <input type="tel" id="whatsapp" required>
+                
+                <label for="selected-batch">Selected Batch:</label>
+                <input type="text" id="selected-batch" readonly>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
