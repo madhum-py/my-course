@@ -1,37 +1,33 @@
 document.addEventListener("DOMContentLoaded", function () {
     const registerButtons = document.querySelectorAll(".register-btn");
     const modal = document.querySelector(".modal");
-    const closeBtn = document.querySelector(".close-btn");
+    const closeModal = document.querySelector(".close-btn");
     const form = document.getElementById("registration-form");
     const nameInput = document.getElementById("name");
     const emailInput = document.getElementById("email");
     const whatsappInput = document.getElementById("whatsapp");
-    const batchInput = document.getElementById("selected-batch");
+    const batchInput = document.getElementById("batch");
 
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
-            batchInput.value = this.getAttribute("data-batch");
-            form.reset(); // Reset form fields before opening
+            batchInput.value = button.getAttribute("data-batch");
             modal.classList.remove("hidden");
+            form.reset(); // Reset form fields on each new registration
         });
     });
 
-    closeBtn.addEventListener("click", function () {
+    closeModal.addEventListener("click", function () {
         modal.classList.add("hidden");
     });
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
-        
-        if (nameInput.value.trim() === "" || whatsappInput.value.trim() === "") {
-            alert("Please fill all required fields!");
-            return;
-        }
 
+        // Simulate successful registration
         modal.innerHTML = `
             <div class="modal-content">
-                <h2>🎉 Registration Successful!</h2>
-                <p>We will contact you soon.</p>
+                <h2>Congratulations!</h2>
+                <p>You have successfully registered.</p>
                 <button id="ok-btn">OK</button>
             </div>
         `;
