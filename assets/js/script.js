@@ -10,13 +10,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Open Registration Modal
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
-            const batchInfo = this.getAttribute("data-batch"); // Fetch batch details
-            selectedBatchDisplay.textContent = batchInfo || "Not Available"; // Set batch text
-
-            // Clear previous input values when opening modal
+            const batchInfo = this.getAttribute("data-batch");
+            selectedBatchDisplay.textContent = batchInfo || "Not Available";
             registrationForm.reset();
-
-            modal.classList.add("show"); // Show modal
+            modal.classList.add("show");
             modal.classList.remove("hide");
         });
     });
@@ -26,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
         button.addEventListener("click", function () {
             const parentModal = this.closest(".modal");
             parentModal.classList.add("hide");
-
             setTimeout(() => {
                 parentModal.classList.remove("show");
             }, 300);
@@ -35,10 +31,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Handle Form Submission
     registrationForm.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent default form submission
-
+        event.preventDefault();
         modal.classList.add("hide");
-
         setTimeout(() => {
             modal.classList.remove("show");
             successModal.classList.add("show");
@@ -48,9 +42,22 @@ document.addEventListener("DOMContentLoaded", function () {
     // Close Success Modal
     okButton.addEventListener("click", function () {
         successModal.classList.add("hide");
-
         setTimeout(() => {
             successModal.classList.remove("show");
         }, 300);
+    });
+
+    const menuToggle = document.getElementById("menu-toggle");
+    const navbar = document.querySelector(".navbar");
+
+    menuToggle.addEventListener("click", function () {
+        navbar.classList.toggle("show");
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener("click", function (event) {
+        if (!menuToggle.contains(event.target) && !navbar.contains(event.target)) {
+            navbar.classList.remove("show");
+        }
     });
 });
