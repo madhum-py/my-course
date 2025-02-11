@@ -99,6 +99,7 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 20px; /* Ensures spacing for smaller screens */
 }
 
 .modal.hidden {
@@ -110,6 +111,7 @@ button:hover {
     padding: 25px;
     border-radius: 12px;
     width: 35%;
+    max-width: 500px; /* Ensures it doesn't stretch too much */
     text-align: left;
     color: black;
     box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.2);
@@ -157,4 +159,73 @@ input:focus {
     border-color: #3498db;
     outline: none;
     box-shadow: 0px 0px 8px rgba(52, 152, 219, 0.5);
+}
+
+.selected-batch-display {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #ff4757;
+    background: #f1f2f6;
+    padding: 10px;
+    border-radius: 8px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+/* Hide Elements */
+.hidden {
+    display: none;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Mobile Compatibility */
+@media (max-width: 768px) {
+    .modal-content {
+        width: 90%;
+        padding: 20px;
+    }
+
+    table {
+        width: 95%;
+    }
+
+    th, td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .close-btn {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 18px;
+    }
+
+    /* Adjusting modal for mobile */
+    .modal {
+        padding: 10px;
+        align-items: flex-start;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        width: 95%;
+        margin-top: 50px; /* Prevents modal from touching top */
+    }
 }
