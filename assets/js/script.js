@@ -1,41 +1,32 @@
 document.addEventListener("DOMContentLoaded", function () {
     const registerButtons = document.querySelectorAll(".register-btn");
-    const modal = document.querySelector(".modal");
-    const closeModal = document.querySelector(".close-btn");
+    const registerModal = document.getElementById("register-modal");
+    const successModal = document.getElementById("success-modal");
+    const closeButtons = document.querySelectorAll(".close-btn");
     const registrationForm = document.getElementById("registration-form");
-    const successMessage = document.getElementById("success-message");
+    const selectedBatchDisplay = document.getElementById("selected-batch");
     const okButton = document.getElementById("ok-btn");
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const whatsappInput = document.getElementById("whatsapp");
-    const selectedBatchInput = document.getElementById("selected-batch");
 
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
-            modal.classList.remove("hidden");
-            successMessage.classList.add("hidden");
-            okButton.classList.add("hidden");
-            registrationForm.classList.remove("hidden");
-
-            selectedBatchInput.value = this.dataset.batch;
-            nameInput.value = "";
-            emailInput.value = "";
-            whatsappInput.value = "";
+            selectedBatchDisplay.textContent = this.getAttribute("data-batch");
+            registerModal.classList.remove("hidden");
         });
     });
 
-    closeModal.addEventListener("click", function () {
-        modal.classList.add("hidden");
+    closeButtons.forEach(button => {
+        button.addEventListener("click", function () {
+            this.closest(".modal").classList.add("hidden");
+        });
     });
 
     registrationForm.addEventListener("submit", function (event) {
         event.preventDefault();
-        successMessage.classList.remove("hidden");
-        okButton.classList.remove("hidden");
-        registrationForm.classList.add("hidden");
+        registerModal.classList.add("hidden");
+        successModal.classList.remove("hidden");
     });
 
     okButton.addEventListener("click", function () {
-        modal.classList.add("hidden");
+        successModal.classList.add("hidden");
     });
 });
