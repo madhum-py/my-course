@@ -13,13 +13,11 @@ document.addEventListener("DOMContentLoaded", function () {
             batchInput.value = this.getAttribute("data-batch");
             form.reset(); // Reset form fields before opening
             modal.classList.remove("hidden");
-            modal.classList.add("show");
         });
     });
 
     closeBtn.addEventListener("click", function () {
         modal.classList.add("hidden");
-        modal.classList.remove("show");
     });
 
     form.addEventListener("submit", function (event) {
@@ -40,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
         document.getElementById("ok-btn").addEventListener("click", function () {
             modal.classList.add("hidden");
-            modal.classList.remove("show");
         });
     });
 });
