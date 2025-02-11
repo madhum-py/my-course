@@ -3,16 +3,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const modal = document.querySelector(".modal");
     const closeModal = document.querySelector(".close-btn");
     const form = document.getElementById("registration-form");
-    const nameInput = document.getElementById("name");
-    const emailInput = document.getElementById("email");
-    const whatsappInput = document.getElementById("whatsapp");
-    const batchInput = document.getElementById("batch");
+    const successMessage = document.getElementById("success-message");
+    const okButton = document.getElementById("ok-btn");
+    const selectedBatch = document.getElementById("selected-batch");
 
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
-            batchInput.value = button.getAttribute("data-batch");
+            const batchInfo = this.getAttribute("data-batch");
+            selectedBatch.textContent = batchInfo;
+            form.classList.remove("hidden");
+            successMessage.classList.add("hidden");
+            okButton.classList.add("hidden");
             modal.classList.remove("hidden");
-            form.reset(); // Reset form fields on each new registration
         });
     });
 
@@ -22,18 +24,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     form.addEventListener("submit", function (event) {
         event.preventDefault();
+        form.classList.add("hidden");
+        successMessage.classList.remove("hidden");
+        okButton.classList.remove("hidden");
+    });
 
-        // Simulate successful registration
-        modal.innerHTML = `
-            <div class="modal-content">
-                <h2>Congratulations!</h2>
-                <p>You have successfully registered.</p>
-                <button id="ok-btn">OK</button>
-            </div>
-        `;
-
-        document.getElementById("ok-btn").addEventListener("click", function () {
-            modal.classList.add("hidden");
-        });
+    okButton.addEventListener("click", function () {
+        modal.classList.add("hidden");
     });
 });

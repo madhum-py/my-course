@@ -3,68 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta Minds EdTech - Register</title>
+    <title>Meta Minds EdTech - Live Coding Classes</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
     <header>
         <h1>Meta Minds EdTech</h1>
-        <nav>
-            <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Courses</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
+        <p class="quote">"Empowering Minds with Code!"</p>
     </header>
 
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Courses</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
     <main>
-        <h2>Register for Our Live Online Course</h2>
+        <h2>Available Batches</h2>
         <table>
-            <tr>
-                <th>Date</th>
-                <th>Start Time</th>
-                <th>End Time</th>
-                <th>Action</th>
-            </tr>
-            <tr>
-                <td>March 10, 2025</td>
-                <td>7:00 PM</td>
-                <td>8:00 PM</td>
-                <td><button class="register-btn" data-batch="March 10, 7:00 PM - 8:00 PM">Register</button></td>
-            </tr>
-            <tr>
-                <td>March 15, 2025</td>
-                <td>6:00 PM</td>
-                <td>7:00 PM</td>
-                <td><button class="register-btn" data-batch="March 15, 6:00 PM - 7:00 PM">Register</button></td>
-            </tr>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Register</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>March 10, 2025</td>
+                    <td>6:00 PM</td>
+                    <td>7:00 PM</td>
+                    <td><button class="register-btn" data-batch="March 10, 6:00 PM - 7:00 PM">Register</button></td>
+                </tr>
+                <tr>
+                    <td>March 15, 2025</td>
+                    <td>8:00 PM</td>
+                    <td>9:00 PM</td>
+                    <td><button class="register-btn" data-batch="March 15, 8:00 PM - 9:00 PM">Register</button></td>
+                </tr>
+            </tbody>
         </table>
     </main>
 
+    <!-- Modal -->
     <div class="modal hidden">
         <div class="modal-content">
-            <button class="close-btn">&times;</button>
-            <h2>Register for the Course</h2>
+            <span class="close-btn">&times;</span>
+            <h2>Register for <span id="selected-batch"></span></h2>
             <form id="registration-form">
                 <label for="name">Name:</label>
                 <input type="text" id="name" required>
-                
+
                 <label for="email">Email (Optional):</label>
                 <input type="email" id="email">
-                
+
                 <label for="whatsapp">WhatsApp Number:</label>
                 <input type="tel" id="whatsapp" required>
-                
-                <label for="batch">Selected Batch:</label>
-                <input type="text" id="batch" readonly>
-                
-                <button type="submit">Submit</button>
+
+                <button type="submit" class="submit-btn">Submit</button>
             </form>
+            <p id="success-message" class="hidden">🎉 Congratulations! You're registered.</p>
+            <button id="ok-btn" class="hidden">OK</button>
         </div>
     </div>
 
     <script src="assets/js/script.js"></script>
+
 </body>
 </html>

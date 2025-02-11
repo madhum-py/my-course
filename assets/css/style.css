@@ -1,36 +1,55 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
     background: #f4f4f4;
-    padding: 20px;
+    color: #333;
+    text-align: center;
 }
 
 /* Header */
 header {
-    background: #333;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
     color: white;
-    padding: 15px 0;
+    padding: 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-size: 24px;
+.quote {
+    font-style: italic;
+    font-size: 1.2em;
+    margin-top: 5px;
+}
+
+/* Navbar */
+nav {
+    background: #333;
+    padding: 10px;
 }
 
 nav ul {
     list-style: none;
+    margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
 }
 
 nav ul li {
-    display: inline;
     margin: 0 15px;
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+    padding: 10px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    background: #6a11cb;
+    border-radius: 5px;
 }
 
 /* Table */
@@ -38,32 +57,30 @@ table {
     width: 80%;
     margin: 20px auto;
     border-collapse: collapse;
-    background: white;
 }
 
 th, td {
-    border: 1px solid #ddd;
     padding: 10px;
+    border: 1px solid #ddd;
 }
 
 th {
-    background: #444;
+    background: #6a11cb;
     color: white;
 }
 
 /* Buttons */
 button {
-    padding: 8px 15px;
-    border: none;
-    background: #28a745;
+    background: #6a11cb;
     color: white;
+    border: none;
+    padding: 10px 15px;
     cursor: pointer;
-    font-size: 14px;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #218838;
+    background: #2575fc;
 }
 
 /* Modal */
@@ -77,60 +94,40 @@ button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: opacity 0.3s ease-in-out;
 }
 
 .modal.hidden {
-    opacity: 0;
-    pointer-events: none;
+    display: none !important;
 }
 
 .modal-content {
     background: white;
     padding: 20px;
-    border-radius: 8px;
-    width: 350px;
-    position: relative;
-    text-align: left;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Close Button */
+/* Close button */
 .close-btn {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    border: none;
-    background: none;
-    font-size: 20px;
+    float: right;
+    font-size: 24px;
     cursor: pointer;
 }
 
-/* Form */
-form {
-    display: flex;
-    flex-direction: column;
+.close-btn:hover {
+    color: red;
 }
 
-label {
-    margin: 10px 0 5px;
-    font-weight: bold;
-}
-
-input {
-    padding: 8px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-/* Submit Button */
-form button {
-    background: #007bff;
-    padding: 10px;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-form button:hover {
-    background: #0056b3;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
