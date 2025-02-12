@@ -88,9 +88,6 @@ header {
 }
 
 
-
-
-
 table {
     width: 70%;
     margin: auto;
@@ -645,5 +642,76 @@ input:focus {
         width: 70%; /* More width, less height */
         min-width: 160px;
         padding: 8px;
+    }
+}
+
+/* Why Learn Python Section */
+.why-learn-python {
+    text-align: center;
+    padding: 60px 20px;
+    background: #F8F9FA; /* Light background */
+}
+
+/* Section Heading */
+.why-learn-python h2 {
+    font-size: 28px;
+    color: #007BFF; /* Blue heading */
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+/* Flexbox for Proper Center Alignment */
+.why-reasons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centers all rows */
+    gap: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Individual Reason Card */
+.reason {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    width: 250px; /* Fixed width for consistent layout */
+}
+
+/* Hover Effect */
+.reason:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon Styling */
+.reason i {
+    font-size: 40px;
+    color: #007BFF; /* Blue icons */
+    margin-bottom: 12px;
+}
+
+/* Title of Reason */
+.reason h3 {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Description */
+.reason p {
+    font-size: 16px;
+    color: #444;
+}
+
+/* Responsive Fix: Keep Centered on Mobile */
+@media (max-width: 600px) {
+    .why-reasons {
+        flex-direction: column;
+        align-items: center; /* Ensures single-column layout is centered */
     }
 }
