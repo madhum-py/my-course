@@ -11,10 +11,16 @@ document.addEventListener("DOMContentLoaded", function () {
     registerButtons.forEach(button => {
         button.addEventListener("click", function () {
             const batchInfo = this.getAttribute("data-batch");
-            selectedBatchDisplay.textContent = batchInfo || "Not Available";
-            registrationForm.reset();
-            modal.classList.add("show");
-            modal.classList.remove("hide");
+            if (selectedBatchDisplay) {
+                selectedBatchDisplay.textContent = batchInfo || "Not Available";
+            }
+            if (registrationForm) {
+                registrationForm.reset();
+            }
+            if (modal) {
+                modal.classList.add("show");
+                modal.classList.remove("hide");
+            }
         });
     });
 
@@ -22,46 +28,80 @@ document.addEventListener("DOMContentLoaded", function () {
     closeModalButtons.forEach(button => {
         button.addEventListener("click", function () {
             const parentModal = this.closest(".modal");
-            parentModal.classList.add("hide");
-            setTimeout(() => {
-                parentModal.classList.remove("show");
-            }, 300);
+            if (parentModal) {
+                parentModal.classList.add("hide");
+                setTimeout(() => {
+                    parentModal.classList.remove("show");
+                }, 300);
+            }
         });
     });
 
     // Handle Form Submission
-    registrationForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        modal.classList.add("hide");
-        setTimeout(() => {
-            modal.classList.remove("show");
-            successModal.classList.add("show");
-        }, 300);
-    });
+    if (registrationForm) {
+        registrationForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            if (modal) {
+                modal.classList.add("hide");
+                setTimeout(() => {
+                    modal.classList.remove("show");
+                    if (successModal) {
+                        successModal.classList.add("show");
+                    }
+                }, 300);
+            }
+        });
+    }
 
     // Close Success Modal
-    okButton.addEventListener("click", function () {
-        successModal.classList.add("hide");
-        setTimeout(() => {
-            successModal.classList.remove("show");
-        }, 300);
-    });
+    if (okButton) {
+        okButton.addEventListener("click", function () {
+            if (successModal) {
+                successModal.classList.add("hide");
+                setTimeout(() => {
+                    successModal.classList.remove("show");
+                }, 300);
+            }
+        });
+    }
 
+    // Mobile Menu Toggle
     const menuToggle = document.getElementById("menu-toggle");
     const navbar = document.querySelector(".navbar");
 
-    menuToggle.addEventListener("click", function () {
-        navbar.classList.toggle("show");
-    });
+    if (menuToggle && navbar) {
+        menuToggle.addEventListener("click", function () {
+            navbar.classList.toggle("show");
+        });
 
-    // Close menu when clicking outside
-    document.addEventListener("click", function (event) {
-        if (!menuToggle.contains(event.target) && !navbar.contains(event.target)) {
-            navbar.classList.remove("show");
-        }
+        // Close menu when clicking outside
+        document.addEventListener("click", function (event) {
+            if (!menuToggle.contains(event.target) && !navbar.contains(event.target)) {
+                navbar.classList.remove("show");
+            }
+        });
+    }
+
+    // Curriculum Section Toggle
+    const toggles = document.querySelectorAll(".curriculum-toggle");
+
+    toggles.forEach((toggle) => {
+        toggle.addEventListener("click", function () {
+            const content = this.nextElementSibling;
+            const icon = this.querySelector(".toggle-icon");
+
+            if (content.style.maxHeight) {
+                content.style.maxHeight = null;
+                icon.textContent = "+";
+            } else {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.textContent = "−";
+            }
+        });
     });
 });
 
+// Sidebar Toggle
 function toggleSidebar() {
     document.querySelector(".sidebar").classList.toggle("show");
     document.querySelector(".sidebar-overlay").classList.toggle("show");
