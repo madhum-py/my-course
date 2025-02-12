@@ -19,6 +19,22 @@ header {
     align-items: center;
 }
 
+/* Scroll Animation */
+
+.scroll-fade {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.scroll-fade.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* Scroll Animation End */
+
 .custom-hr {
     width: 60%;
     /* Adjust width as needed */
@@ -966,9 +982,8 @@ input:focus {
     }
 }
 
-/*------------------------------------------------------------------- */
-/* Companies Section */
 
+/* Companies Section */
 .companies-section {
     text-align: center;
     margin: 30px auto;

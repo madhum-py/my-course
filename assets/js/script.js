@@ -99,6 +99,25 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+
+    // Scroll Reveal
+    const scrollElements = document.querySelectorAll(".scroll-fade");
+
+    const scrollObserver = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("show");
+                    observer.unobserve(entry.target); // Stop observing once shown
+                }
+            });
+        },
+        { threshold: 0.2 } // Trigger when 20% of the element is visible
+    );
+
+    scrollElements.forEach(element => {
+        scrollObserver.observe(element);
+    });
 });
 
 // Sidebar Toggle
