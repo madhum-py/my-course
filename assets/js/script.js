@@ -109,11 +109,11 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
                 } else {
-                    entry.target.classList.remove("show"); // Remove to allow re-animation
+                    entry.target.classList.remove("show"); // Allow re-animation
                 }
             });
         },
-        { threshold: 0.2 } // Trigger when 20% of the element is visible
+        { threshold: 0.01 } // Almost whole screen is considered as viewport
     );
 
     scrollElements.forEach(element => {
