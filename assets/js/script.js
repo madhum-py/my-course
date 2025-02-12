@@ -104,11 +104,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const scrollElements = document.querySelectorAll(".scroll-fade");
 
     const scrollObserver = new IntersectionObserver(
-        (entries, observer) => {
+        (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add("show");
-                    observer.unobserve(entry.target); // Stop observing once shown
+                } else {
+                    entry.target.classList.remove("show"); // Remove to allow re-animation
                 }
             });
         },
