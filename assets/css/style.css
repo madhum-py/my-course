@@ -391,7 +391,7 @@ input:focus {
     flex-wrap: wrap;
 }
 
-/* Individual Tiles (Perfect Squares in Desktop) */
+/* Individual Tiles (Square with Better Shadow) */
 .tile {
     background: #0066ff;
     color: white;
@@ -408,12 +408,15 @@ input:focus {
     text-wrap: balance;
     word-wrap: break-word;
     white-space: normal;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
-    transition: transform 0.2s ease-in-out;
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), /* Main shadow */
+                -2px -2px 6px rgba(255, 255, 255, 0.5); /* Light inner shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .tile:hover {
     transform: scale(1.05);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25), /* Stronger shadow on hover */
+                -3px -3px 8px rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive: 2 Tiles per Row in Mobile */
