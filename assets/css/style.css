@@ -64,6 +64,33 @@ header {
     margin-top: 30px;
 }
 
+.available-batches-header {
+    font-size: 18px; /* Reduced size */
+    font-weight: 600; /* Slightly less bold */
+    text-align: center;
+    color: #000; /* Black text */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 16px; /* Smaller padding */
+    background: white;
+    border: 2px solid #007BFF; /* Blue border */
+    border-radius: 6px; /* Slightly smaller */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    width: fit-content;
+    margin: 10px auto 16px; /* Added bottom margin for spacing */
+}
+
+.available-batches-header i {
+    font-size: 18px; /* Smaller icon */
+    color: #007BFF; /* Blue icon */
+}
+
+
+
+
+
 table {
     width: 70%;
     margin: auto;
