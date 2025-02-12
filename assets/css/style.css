@@ -685,35 +685,35 @@ input:focus {
 
 .why-learn-python {
     text-align: center;
-    padding: 40px 20px;
+    padding: 30px 15px;
     background: #F8F9FA;
 }
 
 .why-learn-python h2 {
-    font-size: 24px;
+    font-size: 22px;
     color: #007BFF;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-/* 🌟 Flexible Grid Layout */
+/* 🌟 FLEXIBLE GRID */
 .why-reasons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px; /* Controls spacing */
+    gap: 10px; /* Less gap to save space */
     max-width: 750px;
     margin: 0 auto;
 }
 
-/* 🌟 Cards */
+/* 🌟 SMALLER CARDS */
 .reason {
     background: white;
-    padding: 10px;
-    width: calc(50% - 10px); /* ✅ Ensures 2 per row */
-    max-width: 180px; /* Prevents stretching */
-    height: 140px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 8px;
+    width: calc(50% - 6px); /* ✅ Ensures 2 per row */
+    max-width: 140px; /* ⬅️ Smaller than before */
+    height: 100px; /* ⬇️ Reduced height */
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease-in-out;
     display: flex;
@@ -723,38 +723,37 @@ input:focus {
 }
 
 .reason:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
 }
 
 .reason i {
-    font-size: 28px;
+    font-size: 20px; /* ⬇️ Smaller icon */
     color: #007BFF;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .reason h3 {
-    font-size: 16px;
+    font-size: 12px; /* ⬇️ Smaller text */
     color: #000;
 }
 
-/* ✅ Mobile Fix: Force 2 Per Row */
-@media (max-width: 600px) {
+/* ✅ SUPER COMPACT FOR SMALL SCREENS */
+@media (max-width: 480px) {
     .why-reasons {
-        max-width: 95%; /* Keeps it within the screen */
+        max-width: 100%;
     }
 
     .reason {
-        width: calc(50% - 10px); /* ✅ Exact fit for 2 per row */
-        max-width: 150px;
-        height: 120px;
+        width: calc(50% - 4px); /* ✅ Forces 2 per row */
+        max-width: 120px; /* ⬅️ Smaller */
+        height: 90px; /* ⬇️ Smaller */
     }
 
     .reason i {
-        font-size: 22px;
+        font-size: 18px; /* ⬇️ Smaller */
     }
 
     .reason h3 {
-        font-size: 14px;
+        font-size: 11px; /* ⬇️ Smaller */
     }
 }
-
