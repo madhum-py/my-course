@@ -533,7 +533,7 @@ input:focus {
     border: 2px solid rgba(0, 102, 255, 0.2);
     padding: 20px;
     border-radius: 10px;
-    width: 70%; /* Keeps it wider */
+    width: 70%; /* Wider for better spacing */
     max-width: 700px;
     margin: 30px auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -566,10 +566,10 @@ input:focus {
 .pitch-card {
     background: white;
     border-radius: 8px;
-    padding: 8px 14px; /* Less padding to avoid elongation */
-    width: 180px; /* Wider to use extra space */
-    height: auto; /* Adjust height dynamically */
-    min-height: 80px; /* Ensures it remains compact */
+    padding: 10px 16px; /* Less padding to keep compact */
+    width: 200px; /* Wider */
+    height: auto;
+    min-height: 75px; /* Shorter height */
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -608,15 +608,15 @@ input:focus {
     font-weight: bold;
 }
 
-/* Responsive: 2 Cards Per Row in Mobile */
+/* Mobile View: Cards Are Wider & Less Tall */
 @media (max-width: 600px) {
     .pitch-grid {
         justify-content: center;
     }
 
     .pitch-card {
-        width: 48%; /* Two per row */
-        min-width: 135px;
+        width: 70%; /* More width, less height */
+        min-width: 160px;
         padding: 8px;
     }
 }
