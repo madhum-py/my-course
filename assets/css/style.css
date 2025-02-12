@@ -276,6 +276,19 @@ input:focus {
     margin-bottom: 10px;
 }
 
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
 /* Hamburger Menu */
 .hamburger-menu {
     display: none;
@@ -358,20 +371,6 @@ input:focus {
         display: none;
     }
 }
-
-/* Keyframe Animations */
-@keyframes fadeIn {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
 
 
 /* Hamburger Menu */
@@ -531,6 +530,7 @@ input:focus {
     max-width: 800px;
 }
 
+/*------------------------------------------------------------------- */
 /* Course Tiles - Desktop: Single Row, Mobile: 2 per row */
 .course-details {
     display: grid;
@@ -589,6 +589,7 @@ input:focus {
     }
 }
 
+/*------------------------------------------------------------------- */
 /* Course Pitch Section */
 .course-pitch {
     background: rgba(0, 102, 255, 0.05);
@@ -691,6 +692,9 @@ input:focus {
     }
 }
 
+/*------------------------------------------------------------------- */
+/* Why Learn Python Section */
+
 .why-learn-python {
     text-align: center;
     padding: 30px 15px;
@@ -777,8 +781,9 @@ input:focus {
     }
 }
 
+/*------------------------------------------------------------------- */
 /* Course Curriculum Section */
-/* Course Curriculum Section */
+
 .curriculum-section {
     text-align: center;
     margin: 40px auto;
@@ -880,8 +885,9 @@ input:focus {
     padding: 12px 15px;
 }
 
+/*------------------------------------------------------------------- */
 /* Career opportunities with Python Section */
-/* Career Opportunities Section */
+
 .career-section {
     text-align: center;
     margin: 40px auto;
@@ -960,7 +966,9 @@ input:focus {
     }
 }
 
+/*------------------------------------------------------------------- */
 /* Companies Section */
+
 .companies-section {
     text-align: center;
     margin: 30px auto;
@@ -1009,13 +1017,9 @@ input:focus {
 
 /* Mobile View: 4 per row, centered last row */
 @media (max-width: 600px) {
-    .companies-logos {
-        padding: 0 20px; /* Adds spacing from the left and right */
-    }
-
     .companies-logos img {
-        flex: 1 1 calc(25% - 20px); /* Adjust width to keep them evenly spaced */
-        max-width: 45px; /* Reduce size slightly */
+        flex: 1 1 calc(25% - 10px); /* 4 per row */
+        max-width: 50px;
     }
 
     /* Auto-center last row */
@@ -1023,7 +1027,6 @@ input:focus {
         content: "";
         display: block;
         flex: 1 1 50%;
-        max-width: 45px;
+        max-width: 50px;
     }
 }
-
