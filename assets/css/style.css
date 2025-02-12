@@ -1,4 +1,3 @@
-
 /* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
@@ -9,15 +8,22 @@ body {
     overflow-x: hidden;
 }
 
-
 /* Header */
 header {
     background: white;
     padding: 15px 5%;
-    border-bottom: 3px solid #0058b8;
+    border-bottom: 1px solid #004fa3; /* Thinner line for subtle separation */
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.custom-hr {
+    width: 60%; /* Adjust width as needed */
+    height: 2px; /* Adjust thickness */
+    border: none;
+    margin: 20px auto;
+    background: linear-gradient(to right, transparent, #004fa3, transparent);
 }
 
 /* Institute Name & Tagline as a Logo (Top Left) */
@@ -29,7 +35,7 @@ header {
 
 .header-logo h1 {
     font-size: 1.8em;
-    color: #0058b8;
+    color: #004fa3; /* Updated branding color */
     font-weight: 600;
     margin: 0;
 }
@@ -58,8 +64,9 @@ header {
 }
 
 .navbar a:hover {
-    color: #0058b8;
+    color: #004fa3; /* Updated branding color */
 }
+
 
 /* Batches Table */
 .batch-section {
