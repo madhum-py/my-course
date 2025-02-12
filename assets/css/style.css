@@ -801,14 +801,17 @@ input:focus {
     text-align: center;
     margin: 40px auto;
     padding: 20px;
-    max-width: 800px;
+    max-width: 750px;
 }
 
+/* Section Title */
 .curriculum-title {
-    font-size: 24px;
-    color: #004fa3;
+    font-size: 22px;
+    color: #003b7a;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
 }
 
 /* Curriculum Container */
@@ -818,84 +821,79 @@ input:focus {
     gap: 10px;
 }
 
-/* Each Collapsible Section */
+/* Each Day Block */
 .curriculum-day {
-    border: 2px solid #004fa3;
-    border-radius: 8px;
+    border: none; /* Removed visible border */
+    border-radius: 8px; /* Slightly softer corners */
     overflow: hidden;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.curriculum-day:hover {
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.12);
 }
 
 /* Collapsible Button */
 .curriculum-toggle {
     width: 100%;
-    background: #004fa3;
+    background: linear-gradient(to right, #004fa3, #003b7a);
     color: white;
-    padding: 12px;
+    padding: 10px 12px;
     font-size: 16px;
     font-weight: bold;
     border: none;
     cursor: pointer;
     text-align: left;
-    transition: background 0.3s;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    transition: background 0.3s, padding 0.3s;
+    border-radius: 8px; /* Matching soft corners */
 }
 
 .curriculum-toggle:hover {
-    background: #003b7a;
+    background: linear-gradient(to right, #003b7a, #002855);
+    padding-left: 15px;
 }
 
 /* Expand/Collapse Icon */
 .toggle-icon {
     font-weight: bold;
-    font-size: 18px;
-    margin-left: 10px;
+    font-size: 16px;
+    margin-right: 12px;
 }
 
-/* Content initially hidden */
+/* Content (Initially Hidden) */
 .curriculum-content {
     max-height: 0;
     overflow: hidden;
     background: #f8f9fa;
     padding: 0 15px;
     text-align: left;
-    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+    transition: max-height 0.4s ease-out, padding 0.3s ease-out;
+    font-size: 14px;
+    border-radius: 0 0 8px 8px; /* Rounded corners only at the bottom */
 }
 
-/* Show content when expanded */
-.curriculum-day.expanded .curriculum-content {
-    max-height: 500px; /* Adjust based on content */
-    padding: 10px 15px;
-}
-
-/* Bullet points for topics */
+/* Curriculum Content List */
 .curriculum-content ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .curriculum-content li {
-    margin: 5px 0;
-    font-size: 14px;
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
 }
 
-/* Responsive Design */
-@media (max-width: 600px) {
-    .curriculum-section {
-        width: 90%;
-    }
+.curriculum-content li:last-child {
+    border-bottom: none;
+}
 
-    .curriculum-toggle {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    .toggle-icon {
-        font-size: 16px;
-    }
-
-    .curriculum-content li {
-        font-size: 13px;
-    }
+/* When Expanded */
+.curriculum-content.show {
+    padding: 12px 15px;
 }
