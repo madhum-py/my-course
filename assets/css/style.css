@@ -1,3 +1,4 @@
+
 /* General Styling */
 body {
     font-family: 'Poppins', sans-serif;
@@ -8,11 +9,12 @@ body {
     overflow-x: hidden;
 }
 
+
 /* Header */
 header {
     background: white;
     padding: 15px 5%;
-    border-bottom: 3px solid #0066ff;
+    border-bottom: 3px solid #0058b8;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +29,7 @@ header {
 
 .header-logo h1 {
     font-size: 1.8em;
-    color: #0066ff;
+    color: #0058b8;
     font-weight: 600;
     margin: 0;
 }
@@ -56,7 +58,7 @@ header {
 }
 
 .navbar a:hover {
-    color: #0066ff;
+    color: #0058b8;
 }
 
 /* Batches Table */
@@ -79,7 +81,7 @@ header {
     padding: 8px 16px;
     /* Smaller padding */
     background: white;
-    border: 2px solid #007BFF;
+    border: 2px solid #004fa3;
     /* Blue border */
     border-radius: 6px;
     /* Slightly smaller */
@@ -92,7 +94,7 @@ header {
 .available-batches-header i {
     font-size: 18px;
     /* Smaller icon */
-    color: #007BFF;
+    color: #004fa3;
     /* Blue icon */
 }
 
@@ -104,7 +106,7 @@ table {
     background: white;
     border-radius: 10px;
     overflow: hidden;
-    border: 2px solid #0066ff;
+    border: 2px solid #0058b8;
     box-shadow: 0px 0px 15px rgba(0, 102, 255, 0.15);
 }
 
@@ -117,7 +119,7 @@ td {
 }
 
 th {
-    background: #0066ff;
+    background: #0058b8;
     color: white;
     font-weight: 600;
 }
@@ -141,7 +143,7 @@ td {
 
 /* Buttons */
 button {
-    background: #0066ff;
+    background: #0058b8;
     color: white;
     padding: 8px 12px;
     border: none;
@@ -204,7 +206,7 @@ button:hover {
     font-size: 20px;
     cursor: pointer;
     color: white;
-    background: #0066ff;
+    background: #0058b8;
     border: none;
     border-radius: 50%;
     width: 28px;
@@ -228,7 +230,7 @@ form {
 
 input {
     padding: 10px;
-    border: 2px solid #0066ff;
+    border: 2px solid #0058b8;
     border-radius: 5px;
     font-size: 1em;
 }
@@ -243,7 +245,7 @@ input:focus {
     font-size: 1.1em;
     font-weight: 600;
     color: white;
-    background: #0066ff;
+    background: #0058b8;
     padding: 8px;
     border-radius: 6px;
     display: inline-block;
@@ -257,7 +259,7 @@ input:focus {
     background: none;
     border: none;
     cursor: pointer;
-    color: #0066ff;
+    color: #0058b8;
 }
 
 @media (max-width: 768px) {
@@ -300,7 +302,7 @@ input:focus {
     }
 
     .sidebar a:hover {
-        color: #0066ff;
+        color: #0058b8;
     }
 
     .sidebar-overlay {
@@ -355,7 +357,7 @@ input:focus {
     background: none;
     border: none;
     cursor: pointer;
-    color: #0066ff;
+    color: #0058b8;
 }
 
 @media (max-width: 768px) {
@@ -402,7 +404,7 @@ input:focus {
     }
 
     .sidebar a:hover {
-        color: #0066ff;
+        color: #0058b8;
     }
 
     /* Close sidebar when clicking outside */
@@ -473,7 +475,7 @@ input:focus {
 }
 
 .sidebar a:hover {
-    background: #0066ff;
+    background: #0058b8;
     color: white;
 }
 
@@ -526,7 +528,7 @@ input:focus {
 
 /* Individual Tiles (Square with Better Shadow) */
 .tile {
-    background: #0066ff;
+    background: #0058b8;
     color: white;
     font-size: 1em;
     font-weight: bold;
@@ -597,7 +599,7 @@ input:focus {
 
 /* Section Heading */
 .course-pitch h2 {
-    color: #0066ff;
+    color: #0058b8;
     margin-bottom: 12px;
     font-size: 1.6em;
 }
@@ -605,7 +607,7 @@ input:focus {
 /* Introductory Text */
 .pitch-intro {
     font-size: 1em;
-    color: #333;
+    color: #002b5e;
     margin-bottom: 18px;
 }
 
@@ -650,14 +652,14 @@ input:focus {
 .pitch-card h3 {
     font-size: 1em;
     margin-bottom: 4px;
-    color: #0044cc;
+    color: #003b7a;
 }
 
 /* Card Text */
 .pitch-card p {
     font-size: 0.8em;
     /* Slightly smaller */
-    color: #555;
+    color: #004071;
     line-height: 1.2;
     /* Less height to keep compact */
 }
@@ -691,7 +693,7 @@ input:focus {
 
 .why-learn-python h2 {
     font-size: 22px;
-    color: #007BFF;
+    color: #004fa3;
     margin-bottom: 15px;
 }
 
@@ -728,7 +730,7 @@ input:focus {
 
 .reason i {
     font-size: 20px; /* ⬇️ Smaller icon */
-    color: #007BFF;
+    color: #004fa3;
     margin-bottom: 3px;
 }
 
