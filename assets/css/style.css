@@ -686,7 +686,7 @@ input:focus {
 .why-learn-python {
     text-align: center;
     padding: 40px 20px;
-    background: #F8F9FA; /* Light background */
+    background: #F8F9FA;
 }
 
 .why-learn-python h2 {
@@ -695,22 +695,23 @@ input:focus {
     margin-bottom: 20px;
 }
 
-/* Updated Grid */
+/* 🌟 Flexible Grid Layout */
 .why-reasons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 15px; /* Reduced gap for compactness */
-    max-width: 750px; /* Slightly reduced width */
+    gap: 12px; /* Controls spacing */
+    max-width: 750px;
     margin: 0 auto;
 }
 
-/* More Compact Cards */
+/* 🌟 Cards */
 .reason {
     background: white;
-    padding: 12px; /* Reduced padding */
-    width: 180px; /* More condensed width */
-    height: 140px; /* Fixed height */
+    padding: 10px;
+    width: calc(50% - 10px); /* ✅ Ensures 2 per row */
+    max-width: 180px; /* Prevents stretching */
+    height: 140px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -726,7 +727,7 @@ input:focus {
 }
 
 .reason i {
-    font-size: 28px; /* Slightly reduced icon size */
+    font-size: 28px;
     color: #007BFF;
     margin-bottom: 5px;
 }
@@ -736,22 +737,24 @@ input:focus {
     color: #000;
 }
 
-/* Mobile View: 2 Cards Per Row */
+/* ✅ Mobile Fix: Force 2 Per Row */
 @media (max-width: 600px) {
     .why-reasons {
-        max-width: 400px; /* Ensure proper alignment */
+        max-width: 95%; /* Keeps it within the screen */
     }
-    
+
     .reason {
-        width: 150px; /* More compact */
+        width: calc(50% - 10px); /* ✅ Exact fit for 2 per row */
+        max-width: 150px;
         height: 120px;
     }
 
     .reason i {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .reason h3 {
         font-size: 14px;
     }
 }
+
