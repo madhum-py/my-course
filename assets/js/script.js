@@ -61,3 +61,13 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function toggleSidebar() {
+    document.querySelector(".sidebar").classList.toggle("show");
+    document.querySelector(".sidebar-overlay").classList.toggle("show");
+}
+
+function closeSidebar() {
+    document.querySelector(".sidebar").classList.remove("show");
+    document.querySelector(".sidebar-overlay").classList.remove("show");
+}

@@ -233,38 +233,136 @@ input:focus {
     color: #0066ff;
 }
 
-/* Responsive Navbar */
 @media (max-width: 768px) {
     .hamburger-menu {
         display: block;
     }
 
+    /* Hide normal navbar and use sidebar instead */
     .navbar {
         display: none;
-        flex-direction: column;
+    }
+
+    /* Sidebar for mobile */
+    .sidebar {
+        position: fixed;
+        top: 0;
+        right: -250px; /* Start off-screen */
+        width: 250px;
+        height: 100%;
         background: white;
-        position: absolute;
-        top: 60px;
+        box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+        display: flex;
+        flex-direction: column;
+        padding-top: 60px;
+        transition: right 0.3s ease-in-out;
+        z-index: 1000;
+    }
+
+    /* Show sidebar when active */
+    .sidebar.show {
+        right: 0;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+        padding: 15px;
+        text-align: left;
+        font-size: 1.2em;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+        transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+        color: #0066ff;
+    }
+
+    /* Close sidebar when clicking outside */
+    .sidebar-overlay {
+        position: fixed;
+        top: 0;
         left: 0;
         width: 100%;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-top: 2px solid #0066ff;
-        padding: 10px 0;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        z-index: 999;
     }
 
-    .navbar a {
-        padding: 12px;
-        display: block;
-    }
-
-    .navbar.show {
-        display: flex;
+    .sidebar-overlay.show {
+        opacity: 1;
+        visibility: visible;
     }
 }
 
-@media (max-width: 480px) {
-    .modal-content {
-        width: 95%;
-        padding: 15px; /* Reduce padding to save space */
+/* Ensure normal navbar is visible in desktop view */
+@media (min-width: 769px) {
+    .navbar {
+        display: flex;
+        gap: 20px;
     }
+
+    .sidebar {
+        display: none; /* Hide sidebar on desktop */
+    }
+}
+
+
+/* Sidebar Navigation */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px; /* Start off-screen */
+    width: 250px;
+    height: 100%;
+    background: white;
+    box-shadow: -3px 0px 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.sidebar.show {
+    right: 0; /* Slide in */
+}
+
+.sidebar a {
+    padding: 15px;
+    font-size: 1.1em;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: 0.3s;
+    text-align: center;
+    display: block;
+}
+
+.sidebar a:hover {
+    background: #0066ff;
+    color: white;
+}
+
+/* Overlay for clicking outside */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999;
+}
+
+.overlay.show {
+    visibility: visible;
+    opacity: 1;
 }

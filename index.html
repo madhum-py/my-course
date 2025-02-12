@@ -13,13 +13,25 @@
             <h1>Meta Minds EdTech</h1>
             <p class="tagline">"Empowering Minds with Code"</p>
         </div>
-        <button id="menu-toggle" class="hamburger-menu">&#9776;</button> 
+        <!-- Hamburger menu button -->
+        <button class="hamburger-menu" onclick="toggleSidebar()">☰</button>
+
+        <!-- Normal Navbar for Desktop -->
         <nav class="navbar">
             <a href="#">Home</a>
             <a href="#">About</a>
             <a href="#">Courses</a>
             <a href="#">Contact</a>
         </nav>
+
+        <!-- Sidebar for Mobile -->
+        <div class="sidebar-overlay" onclick="closeSidebar()"></div>
+        <div class="sidebar">
+            <a href="#" onclick="closeSidebar()">Home</a>
+            <a href="#" onclick="closeSidebar()">About</a>
+            <a href="#" onclick="closeSidebar()">Courses</a>
+            <a href="#" onclick="closeSidebar()">Contact</a>
+        </div>
     </header>
     
 
