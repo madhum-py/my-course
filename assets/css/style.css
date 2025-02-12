@@ -368,20 +368,20 @@ input:focus {
 }
 
 
-/* Course Details Section Container (Adjusted Width) */
+/* Course Details Section Container (Centered & Fixed for Mobile) */
 .course-section {
     background: rgba(0, 102, 255, 0.05); /* Light blue tint */
     border: 2px solid rgba(0, 102, 255, 0.2); /* Light blue border */
     padding: 15px;
     border-radius: 12px;
-    width: fit-content; /* Adjust width based on content */
-    margin: 30px auto;
+    width: fit-content;
+    max-width: 80%; /* Prevents stretching */
+    margin: 30px auto; /* Centers it */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centering content */
+    align-items: center;
 }
-
 
 /* Course Details Flexbox */
 .course-details {
@@ -391,37 +391,46 @@ input:focus {
     flex-wrap: wrap;
 }
 
-/* Individual Tiles (Perfect Square) */
+/* Individual Tiles (Perfect Squares in Desktop) */
 .tile {
     background: #0066ff;
     color: white;
     font-size: 1em;
     font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: center;
     width: 100px; /* Square */
-    height: 100px; /* Square */
+    height: 100px; /* Ensures square shape */
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 8px;
-    text-align: center;
+    text-wrap: balance;
+    word-wrap: break-word;
+    white-space: normal;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15);
     transition: transform 0.2s ease-in-out;
 }
 
-/* Hover effect */
 .tile:hover {
     transform: scale(1.05);
 }
 
-
-/* Responsive: 2 tiles per row on small screens */
+/* Responsive: 2 Tiles per Row in Mobile */
 @media (max-width: 600px) {
+    .course-section {
+        max-width: 300px; /* Prevents too much height */
+        padding: 10px;
+    }
+
     .course-details {
-        justify-content: space-around;
+        justify-content: center;
     }
 
     .tile {
-        width: 45%;
-        aspect-ratio: 1 / 1;
+        width: 40%;  /* Two tiles per row */
+        height: auto; /* Prevents excessive height */
+        padding: 8px; /* Smaller padding */
+        font-size: 0.9em; /* Slightly smaller text */
     }
 }
