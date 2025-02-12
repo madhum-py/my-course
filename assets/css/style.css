@@ -65,26 +65,35 @@ header {
 }
 
 .available-batches-header {
-    font-size: 18px; /* Reduced size */
-    font-weight: 600; /* Slightly less bold */
+    font-size: 18px;
+    /* Reduced size */
+    font-weight: 600;
+    /* Slightly less bold */
     text-align: center;
-    color: #000; /* Black text */
+    color: #000;
+    /* Black text */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 8px 16px; /* Smaller padding */
+    padding: 8px 16px;
+    /* Smaller padding */
     background: white;
-    border: 2px solid #007BFF; /* Blue border */
-    border-radius: 6px; /* Slightly smaller */
+    border: 2px solid #007BFF;
+    /* Blue border */
+    border-radius: 6px;
+    /* Slightly smaller */
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
     width: fit-content;
-    margin: 10px auto 16px; /* Added bottom margin for spacing */
+    margin: 10px auto 16px;
+    /* Added bottom margin for spacing */
 }
 
 .available-batches-header i {
-    font-size: 18px; /* Smaller icon */
-    color: #007BFF; /* Blue icon */
+    font-size: 18px;
+    /* Smaller icon */
+    color: #007BFF;
+    /* Blue icon */
 }
 
 
@@ -99,7 +108,8 @@ table {
     box-shadow: 0px 0px 15px rgba(0, 102, 255, 0.15);
 }
 
-th, td {
+th,
+td {
     padding: 8px;
     text-align: center;
     color: black;
@@ -122,7 +132,8 @@ td {
         width: 60%;
     }
 
-    th, td {
+    th,
+    td {
         padding: 6px;
         font-size: 0.85em;
     }
@@ -328,6 +339,7 @@ input:focus {
         transform: scale(0.9);
         opacity: 0;
     }
+
     to {
         transform: scale(1);
         opacity: 1;
@@ -360,7 +372,8 @@ input:focus {
     .sidebar {
         position: fixed;
         top: 0;
-        right: -250px; /* Start off-screen */
+        right: -250px;
+        /* Start off-screen */
         width: 250px;
         height: 100%;
         background: white;
@@ -420,7 +433,8 @@ input:focus {
     }
 
     .sidebar {
-        display: none; /* Hide sidebar on desktop */
+        display: none;
+        /* Hide sidebar on desktop */
     }
 }
 
@@ -429,7 +443,8 @@ input:focus {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -250px; /* Start off-screen */
+    right: -250px;
+    /* Start off-screen */
     width: 250px;
     height: 100%;
     background: white;
@@ -442,7 +457,8 @@ input:focus {
 }
 
 .sidebar.show {
-    right: 0; /* Slide in */
+    right: 0;
+    /* Slide in */
 }
 
 .sidebar a {
@@ -483,13 +499,17 @@ input:focus {
 
 /* Course Details Section Container (Centered & Fixed for Mobile) */
 .course-section {
-    background: rgba(0, 102, 255, 0.05); /* Light blue tint */
-    border: 2px solid rgba(0, 102, 255, 0.2); /* Light blue border */
+    background: rgba(0, 102, 255, 0.05);
+    /* Light blue tint */
+    border: 2px solid rgba(0, 102, 255, 0.2);
+    /* Light blue border */
     padding: 15px;
     border-radius: 12px;
     width: fit-content;
-    max-width: 80%; /* Prevents stretching */
-    margin: 30px auto; /* Centers it */
+    max-width: 80%;
+    /* Prevents stretching */
+    margin: 30px auto;
+    /* Centers it */
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -513,29 +533,35 @@ input:focus {
     padding: 10px;
     border-radius: 8px;
     text-align: center;
-    width: 100px; /* Square */
-    height: 100px; /* Ensures square shape */
+    width: 100px;
+    /* Square */
+    height: 100px;
+    /* Ensures square shape */
     display: flex;
     align-items: center;
     justify-content: center;
     text-wrap: balance;
     word-wrap: break-word;
     white-space: normal;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2), /* Main shadow */
-                -2px -2px 6px rgba(255, 255, 255, 0.5); /* Light inner shadow */
+    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2),
+        /* Main shadow */
+        -2px -2px 6px rgba(255, 255, 255, 0.5);
+    /* Light inner shadow */
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
 .tile:hover {
     transform: scale(1.05);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25), /* Stronger shadow on hover */
-                -3px -3px 8px rgba(255, 255, 255, 0.6);
+    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25),
+        /* Stronger shadow on hover */
+        -3px -3px 8px rgba(255, 255, 255, 0.6);
 }
 
 /* Responsive: 2 Tiles per Row in Mobile */
 @media (max-width: 600px) {
     .course-section {
-        max-width: 300px; /* Prevents too much height */
+        max-width: 300px;
+        /* Prevents too much height */
         padding: 10px;
     }
 
@@ -544,10 +570,14 @@ input:focus {
     }
 
     .tile {
-        width: 40%;  /* Two tiles per row */
-        height: auto; /* Prevents excessive height */
-        padding: 8px; /* Smaller padding */
-        font-size: 0.9em; /* Slightly smaller text */
+        width: 40%;
+        /* Two tiles per row */
+        height: auto;
+        /* Prevents excessive height */
+        padding: 8px;
+        /* Smaller padding */
+        font-size: 0.9em;
+        /* Slightly smaller text */
     }
 }
 
@@ -557,7 +587,8 @@ input:focus {
     border: 2px solid rgba(0, 102, 255, 0.2);
     padding: 20px;
     border-radius: 10px;
-    width: 70%; /* Wider for better spacing */
+    width: 70%;
+    /* Wider for better spacing */
     max-width: 700px;
     margin: 30px auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
@@ -582,7 +613,8 @@ input:focus {
 .pitch-grid {
     display: flex;
     justify-content: center;
-    gap: 12px; /* Keeps enough spacing */
+    gap: 12px;
+    /* Keeps enough spacing */
     flex-wrap: wrap;
 }
 
@@ -590,10 +622,13 @@ input:focus {
 .pitch-card {
     background: white;
     border-radius: 8px;
-    padding: 10px 16px; /* Less padding to keep compact */
-    width: 200px; /* Wider */
+    padding: 10px 16px;
+    /* Less padding to keep compact */
+    width: 200px;
+    /* Wider */
     height: auto;
-    min-height: 75px; /* Shorter height */
+    min-height: 75px;
+    /* Shorter height */
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
     text-align: center;
     transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
@@ -620,9 +655,11 @@ input:focus {
 
 /* Card Text */
 .pitch-card p {
-    font-size: 0.8em; /* Slightly smaller */
+    font-size: 0.8em;
+    /* Slightly smaller */
     color: #555;
-    line-height: 1.2; /* Less height to keep compact */
+    line-height: 1.2;
+    /* Less height to keep compact */
 }
 
 /* Closing Line */
@@ -639,79 +676,82 @@ input:focus {
     }
 
     .pitch-card {
-        width: 70%; /* More width, less height */
+        width: 70%;
+        /* More width, less height */
         min-width: 160px;
         padding: 8px;
     }
 }
 
-/* Why Learn Python Section */
 .why-learn-python {
     text-align: center;
-    padding: 60px 20px;
+    padding: 40px 20px;
     background: #F8F9FA; /* Light background */
 }
 
-/* Section Heading */
 .why-learn-python h2 {
-    font-size: 28px;
-    color: #007BFF; /* Blue heading */
-    font-weight: bold;
-    margin-bottom: 30px;
+    font-size: 24px;
+    color: #007BFF;
+    margin-bottom: 20px;
 }
 
-/* Flexbox for Proper Center Alignment */
+/* Updated Grid */
 .why-reasons {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Centers all rows */
-    gap: 20px;
-    max-width: 900px;
+    justify-content: center;
+    gap: 15px; /* Reduced gap for compactness */
+    max-width: 750px; /* Slightly reduced width */
     margin: 0 auto;
 }
 
-/* Individual Reason Card */
+/* More Compact Cards */
 .reason {
     background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 12px; /* Reduced padding */
+    width: 180px; /* More condensed width */
+    height: 140px; /* Fixed height */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    width: 250px; /* Fixed width for consistent layout */
+    transition: transform 0.2s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
-/* Hover Effect */
 .reason:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Icon Styling */
 .reason i {
-    font-size: 40px;
-    color: #007BFF; /* Blue icons */
-    margin-bottom: 12px;
-}
-
-/* Title of Reason */
-.reason h3 {
-    font-size: 20px;
-    color: #000;
-    font-weight: bold;
+    font-size: 28px; /* Slightly reduced icon size */
+    color: #007BFF;
     margin-bottom: 5px;
 }
 
-/* Description */
-.reason p {
+.reason h3 {
     font-size: 16px;
-    color: #444;
+    color: #000;
 }
 
-/* Responsive Fix: Keep Centered on Mobile */
+/* Mobile View: 2 Cards Per Row */
 @media (max-width: 600px) {
     .why-reasons {
-        flex-direction: column;
-        align-items: center; /* Ensures single-column layout is centered */
+        max-width: 400px; /* Ensure proper alignment */
+    }
+    
+    .reason {
+        width: 150px; /* More compact */
+        height: 120px;
+    }
+
+    .reason i {
+        font-size: 24px;
+    }
+
+    .reason h3 {
+        font-size: 14px;
     }
 }
