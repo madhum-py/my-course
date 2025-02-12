@@ -523,87 +523,69 @@ input:focus {
 }
 
 
-/* Course Details Section Container (Centered & Fixed for Mobile) */
+/* Course Section - Centered */
 .course-section {
-    background: rgba(0, 102, 255, 0.05);
-    /* Light blue tint */
-    border: 2px solid rgba(0, 102, 255, 0.2);
-    /* Light blue border */
-    padding: 15px;
-    border-radius: 12px;
-    width: fit-content;
-    max-width: 80%;
-    /* Prevents stretching */
-    margin: 30px auto;
-    /* Centers it */
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 20px auto;
+    padding: 10px 0;
+    max-width: 800px;
+}
+
+/* Course Tiles - Desktop: Single Row, Mobile: 2 per row */
+.course-details {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns for desktop */
+    gap: 10px;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Course Tiles */
+.tile {
+    background: linear-gradient(135deg, #004fa3, #0077cc);
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-
-/* Course Details Flexbox */
-.course-details {
-    display: flex;
     justify-content: center;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Individual Tiles (Square with Better Shadow) */
-.tile {
-    background: #0058b8;
-    color: white;
-    font-size: 1em;
+    font-size: 14px;
     font-weight: bold;
-    padding: 10px;
-    border-radius: 8px;
-    text-align: center;
-    width: 100px;
-    /* Square */
-    height: 100px;
-    /* Ensures square shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
     text-wrap: balance;
-    word-wrap: break-word;
-    white-space: normal;
-    box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2),
-        /* Main shadow */
-        -2px -2px 6px rgba(255, 255, 255, 0.5);
-    /* Light inner shadow */
-    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+/* Icon Styling */
+.tile i {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+/* Hover Effect */
 .tile:hover {
-    transform: scale(1.05);
-    box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.25),
-        /* Stronger shadow on hover */
-        -3px -3px 8px rgba(255, 255, 255, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.15);
 }
 
-/* Responsive: 2 Tiles per Row in Mobile */
+/* Mobile View: 2 Tiles Per Row */
 @media (max-width: 600px) {
-    .course-section {
-        max-width: 300px;
-        /* Prevents too much height */
-        padding: 10px;
-    }
-
     .course-details {
-        justify-content: center;
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 350px;
+        gap: 8px;
     }
 
     .tile {
-        width: 40%;
-        /* Two tiles per row */
-        height: auto;
-        /* Prevents excessive height */
-        padding: 8px;
-        /* Smaller padding */
-        font-size: 0.9em;
-        /* Slightly smaller text */
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .tile i {
+        font-size: 16px;
     }
 }
 
