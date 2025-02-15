@@ -59,7 +59,7 @@ header {
 }
 
 .header-logo .tagline {
-    font-size: 1em;
+    font-size: 0.8em;
     font-style: italic;
     color: white; /* Adjusted for contrast */
     opacity: 0.9;
